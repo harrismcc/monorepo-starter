@@ -1,4 +1,5 @@
 import express from 'express';
+
 import { LOCAL_PORT } from '@main/utils';
 
 const app = express();

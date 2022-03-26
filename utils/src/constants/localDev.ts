@@ -3,6 +3,5 @@
  * and to values accordingly
  */
 
-
 export const LOCAL_HOSTNAME = 'localhost';
 export const LOCAL_PORT = '3000';
