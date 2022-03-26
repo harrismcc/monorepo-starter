@@ -1,0 +1,7 @@
+name: Monorepo Starter
+description: A starter template for a monorepo
+runtime:
+  name: nodejs
+  options:
+    typescript: true
+main: src/

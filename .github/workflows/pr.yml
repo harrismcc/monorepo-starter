@@ -1,0 +1,29 @@
+name: Build and Test on Pull Request
+on:
+  pull_request:
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code with git
+      - uses: actions/checkout@master
+
+      # Install Yarn Deps
+      - uses: ./.github/commands/install_yarn_deps
+
+      # Build frontend with webpack
+      - run: yarn workspace @main/frontend build
+
+  build-typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: ./.github/commands/install_yarn_deps
+      - run: yarn tsc --build
+
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-python@v2
+      - uses: pre-commit/action@v2.0.3

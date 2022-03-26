@@ -1,0 +1,25 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: validate-todo
+        name: Validate TODOs
+        description: Ensure TODOs match format
+        language: node
+        entry: ./pre_commit_hooks/validate_TODO.js
+      - id: do-not-submit
+        name: DO NOT SUBMIT
+        description: 'This hook ensures that there are no comments with the text DO NOT SUBMIT'
+        entry: ./pre_commit_hooks/do_not_submit.js
+        language: node
+        exclude: (.pre-commit-config.yaml|README.md|templates/.+\.hbs|pre_commit_hooks/do_not_submit.js|releases/v2.2.0.md|.vscode/settings.json|scripts/contentful/todo-remove/templates/backend/seed.ts.hbs|scripts/migrations/make.ts|integration-mocks/src/templates|codelabs/testing/main.md|codelabs/mini-monorepo/main.md)
+        files: ''
