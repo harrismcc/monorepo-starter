@@ -1,0 +1,4 @@
+{
+  "name": "@main/utils",
+  "main": "src/index.ts"
+}
