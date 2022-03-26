@@ -7,9 +7,11 @@
     "frontend"
   ],
   "scripts": {
-    "lint": "eslint"
+    "lint": "eslint",
+    "fix-ts-refs": "utils-typescript-references --skipRoot"
   },
   "devDependencies": {
+    "@goldstack/utils-typescript-references": "^0.1.9",
     "@types/eslint": "^8",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",

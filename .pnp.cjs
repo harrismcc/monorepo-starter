@@ -48,6 +48,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@goldstack/utils-typescript-references", "npm:0.1.9"],\
             ["@types/eslint", "npm:8.4.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:e82b9f80868fd07beb8e2e4dbc4d4f87e92fb1bf3765b751f705a6afac1107c4dd02efbbe33d5e209e5deac6edc32c6ab475c464c8383122fda56cf45a1e9fb2#npm:5.16.0"],\
             ["@typescript-eslint/parser", "virtual:e82b9f80868fd07beb8e2e4dbc4d4f87e92fb1bf3765b751f705a6afac1107c4dd02efbbe33d5e209e5deac6edc32c6ab475c464c8383122fda56cf45a1e9fb2#npm:5.16.0"],\
@@ -1100,6 +1101,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.3-ac1a325862-4059f790e2.zip/node_modules/@gar/promisify/",\
           "packageDependencies": [\
             ["@gar/promisify", "npm:1.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@goldstack/utils-typescript-references", [\
+        ["npm:0.1.9", {\
+          "packageLocation": "./.yarn/cache/@goldstack-utils-typescript-references-npm-0.1.9-330354158d-d4434c7c85.zip/node_modules/@goldstack/utils-typescript-references/",\
+          "packageDependencies": [\
+            ["@goldstack/utils-typescript-references", "npm:0.1.9"],\
+            ["source-map-support", "npm:0.5.21"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6907,6 +6918,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["monorepo-starter", "workspace:."],\
+            ["@goldstack/utils-typescript-references", "npm:0.1.9"],\
             ["@types/eslint", "npm:8.4.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:e82b9f80868fd07beb8e2e4dbc4d4f87e92fb1bf3765b751f705a6afac1107c4dd02efbbe33d5e209e5deac6edc32c6ab475c464c8383122fda56cf45a1e9fb2#npm:5.16.0"],\
             ["@typescript-eslint/parser", "virtual:e82b9f80868fd07beb8e2e4dbc4d4f87e92fb1bf3765b751f705a6afac1107c4dd02efbbe33d5e209e5deac6edc32c6ab475c464c8383122fda56cf45a1e9fb2#npm:5.16.0"],\

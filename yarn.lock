@@ -572,6 +572,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@goldstack/utils-typescript-references@npm:^0.1.9":
+  version: 0.1.9
+  resolution: "@goldstack/utils-typescript-references@npm:0.1.9"
+  dependencies:
+    source-map-support: ^0.5.21
+  bin:
+    utils-typescript-references: ./bin/utils-typescript-references
+  checksum: d4434c7c85c925ddfb84335db36e11a039d751427b312e7ea5e65cc63bc2724f1e897c30069d5988129840c60364a89c18e8c78deb684f66361a525853239a6c
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.9.2":
   version: 0.9.5
   resolution: "@humanwhocodes/config-array@npm:0.9.5"
@@ -5355,6 +5366,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "monorepo-starter@workspace:."
   dependencies:
+    "@goldstack/utils-typescript-references": ^0.1.9
     "@types/eslint": ^8
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
@@ -6519,7 +6531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.6":
+"source-map-support@npm:^0.5.21, source-map-support@npm:^0.5.6":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
