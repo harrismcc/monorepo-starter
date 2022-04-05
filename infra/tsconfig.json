@@ -1,8 +1,0 @@
-{
-  "extends": "../tsconfig.base.json",
-  "compilerOptions": {
-    "outDir": "../build/@main/infra",
-    "tsBuildInfoFile": "../build/@main/infra.tsbuildinfo",
-    "rootDir": "src"
-  }
-}

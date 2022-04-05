@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -21,13 +21,16 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "outDir": "../build/@main/frontend",
-  "tsBuildInfoFile": "../build/@main/frontend.tsbuildinfo",
+  "outDir": "../../build/@main/frontend",
+  "tsBuildInfoFile": "../../build/@main/frontend.tsbuildinfo",
   "rootDir": "src",
   "include": [
     "src"
   ],
   "references": [
+    {
+      "path": "../components"
+    },
     {
       "path": "../utils"
     }

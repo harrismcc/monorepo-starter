@@ -887,9 +887,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@main/backend@workspace:backend":
+"@main/backend@workspace:packages/backend":
   version: 0.0.0-use.local
-  resolution: "@main/backend@workspace:backend"
+  resolution: "@main/backend@workspace:packages/backend"
   dependencies:
     "@main/utils": "workspace:^"
     "@types/express": =4.17.13
@@ -899,10 +899,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@main/frontend@workspace:frontend":
+"@main/components@workspace:^, @main/components@workspace:packages/components":
   version: 0.0.0-use.local
-  resolution: "@main/frontend@workspace:frontend"
+  resolution: "@main/components@workspace:packages/components"
   dependencies:
+    "@types/react": ^17.0.33
+    "@types/react-dom": ^17.0.10
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    typescript: =4.4.4
+  languageName: unknown
+  linkType: soft
+
+"@main/frontend@workspace:packages/frontend":
+  version: 0.0.0-use.local
+  resolution: "@main/frontend@workspace:packages/frontend"
+  dependencies:
+    "@main/components": "workspace:^"
     "@main/utils": "workspace:^"
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
@@ -914,9 +927,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@main/infra@workspace:infra":
+"@main/infra@workspace:packages/infra":
   version: 0.0.0-use.local
-  resolution: "@main/infra@workspace:infra"
+  resolution: "@main/infra@workspace:packages/infra"
   dependencies:
     "@pulumi/aws": =4.24.1
     "@pulumi/pulumi": 3.14.0
@@ -927,9 +940,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@main/utils@workspace:^, @main/utils@workspace:utils":
+"@main/utils@workspace:^, @main/utils@workspace:packages/utils":
   version: 0.0.0-use.local
-  resolution: "@main/utils@workspace:utils"
+  resolution: "@main/utils@workspace:packages/utils"
   languageName: unknown
   linkType: soft
 
@@ -1402,7 +1415,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.1.5":
+"@types/prettier@npm:^2, @types/prettier@npm:^2.1.5":
   version: 2.4.4
   resolution: "@types/prettier@npm:2.4.4"
   checksum: 2c2cc57efd49c7d8907415a72f96c84a6dd8696dd3bf8aa4ca3a667427bebf71cbfbc912673624bdfc935d272d1c008c639cf155f6449315990a4dc110f0d216
@@ -2333,7 +2346,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -2495,6 +2508,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"concurrently@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "concurrently@npm:7.1.0"
+  dependencies:
+    chalk: ^4.1.0
+    date-fns: ^2.16.1
+    lodash: ^4.17.21
+    rxjs: ^6.6.3
+    spawn-command: ^0.0.2-1
+    supports-color: ^8.1.0
+    tree-kill: ^1.2.2
+    yargs: ^16.2.0
+  bin:
+    concurrently: dist/bin/concurrently.js
+  checksum: 723996afc73af7ea914a03726c75b63be6ce83f0825b0bc54de0568ba89490e217ca88523f251fe1e5c30ee2780572dce830b530ef35e435e64c1f94cfd4e4af
+  languageName: node
+  linkType: hard
+
 "confusing-browser-globals@npm:^1.0.10":
   version: 1.0.11
   resolution: "confusing-browser-globals@npm:1.0.11"
@@ -2638,6 +2669,13 @@ __metadata:
     whatwg-mimetype: ^2.3.0
     whatwg-url: ^8.0.0
   checksum: 97caf828aac25e25e04ba6869db0f99c75e6859bb5b424ada28d3e7841941ebf08ddff3c1b1bb4585986bd507a5d54c2a716853ea6cb98af877400e637393e71
+  languageName: node
+  linkType: hard
+
+"date-fns@npm:^2.16.1":
+  version: 2.28.0
+  resolution: "date-fns@npm:2.28.0"
+  checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
   languageName: node
   linkType: hard
 
@@ -5740,9 +5778,11 @@ __metadata:
   dependencies:
     "@goldstack/utils-typescript-references": ^0.1.9
     "@types/eslint": ^8
+    "@types/prettier": ^2
     "@typescript-eslint/eslint-plugin": ^5.14.0
     "@typescript-eslint/parser": ^5.14.0
     "@vitejs/plugin-react": ^1.0.7
+    concurrently: ^7.1.0
     depcheck: ^1.4.3
     eslint: ^8.12.0
     eslint-config-airbnb: ^19.0.4
@@ -5762,6 +5802,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^7.0.0
     eslint-plugin-unicorn: ^41.0.0
     jest: ^27.5.1
+    prettier: ^2.6.2
     ts-node: =10.4.0
     typescript: =4.4.4
   languageName: unknown
@@ -6304,6 +6345,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "prettier@npm:2.6.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 48d08dde8e9fb1f5bccdd205baa7f192e9fc8bc98f86e1b97d919de804e28c806b0e6cc685e4a88211aa7987fa9668f30baae19580d87ced3ed0f2ec6572106f
+  languageName: node
+  linkType: hard
+
 "pretty-format@npm:^27.5.1":
   version: 27.5.1
   resolution: "pretty-format@npm:27.5.1"
@@ -6764,6 +6814,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^6.6.3":
+  version: 6.6.7
+  resolution: "rxjs@npm:6.6.7"
+  dependencies:
+    tslib: ^1.9.0
+  checksum: bc334edef1bb8bbf56590b0b25734ba0deaf8825b703256a93714308ea36dff8a11d25533671adf8e104e5e8f256aa6fdfe39b2e248cdbd7a5f90c260acbbd1b
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:5.1.2, safe-buffer@npm:~5.1.1":
   version: 5.1.2
   resolution: "safe-buffer@npm:5.1.2"
@@ -7062,6 +7121,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"spawn-command@npm:^0.0.2-1":
+  version: 0.0.2
+  resolution: "spawn-command@npm:0.0.2"
+  checksum: e35c5d28177b4d461d33c88cc11f6f3a5079e2b132c11e1746453bbb7a0c0b8a634f07541a2a234fa4758239d88203b758def509161b651e81958894c0b4b64b
+  languageName: node
+  linkType: hard
+
 "spdx-correct@npm:^3.0.0":
   version: 3.1.1
   resolution: "spdx-correct@npm:3.1.1"
@@ -7258,7 +7324,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^8.0.0":
+"supports-color@npm:^8.0.0, supports-color@npm:^8.1.0":
   version: 8.1.1
   resolution: "supports-color@npm:8.1.1"
   dependencies:
@@ -7390,6 +7456,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tree-kill@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "tree-kill@npm:1.2.2"
+  bin:
+    tree-kill: cli.js
+  checksum: 49117f5f410d19c84b0464d29afb9642c863bc5ba40fcb9a245d474c6d5cc64d1b177a6e6713129eb346b40aebb9d4631d967517f9fbe8251c35b21b13cd96c7
+  languageName: node
+  linkType: hard
+
 "ts-node@npm:=10.4.0":
   version: 10.4.0
   resolution: "ts-node@npm:10.4.0"
@@ -7483,7 +7558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd

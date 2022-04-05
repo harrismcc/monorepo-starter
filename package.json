@@ -2,21 +2,23 @@
   "name": "monorepo-starter",
   "packageManager": "yarn@3.2.0",
   "workspaces": [
-    "backend",
-    "utils",
-    "frontend",
-    "infra"
+    "packages/*"
   ],
   "scripts": {
     "lint": "eslint",
-    "fix-ts-refs": "utils-typescript-references --skipRoot"
+    "fix-ts-refs": "utils-typescript-references --skipRoot",
+    "start": "concurrently \"yarn:frontend\" \"yarn:backend\"",
+    "frontend": "yarn workspace @main/frontend dev",
+    "backend": "yarn workspace @main/backend start"
   },
   "devDependencies": {
     "@goldstack/utils-typescript-references": "^0.1.9",
     "@types/eslint": "^8",
+    "@types/prettier": "^2",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",
     "@vitejs/plugin-react": "^1.0.7",
+    "concurrently": "^7.1.0",
     "depcheck": "^1.4.3",
     "eslint": "^8.12.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -36,6 +38,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unicorn": "^41.0.0",
     "jest": "^27.5.1",
+    "prettier": "^2.6.2",
     "ts-node": "=10.4.0",
     "typescript": "=4.4.4"
   }
