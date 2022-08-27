@@ -1,0 +1,32 @@
+{
+    "recommendations": [
+      "arcanis.vscode-zipfs",
+      "slevesque.vscode-zipexplorer",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bcanzanella.openmatchingfiles",
+      "vscode-icons-team.vscode-icons",
+      "wayou.vscode-todo-highlight",
+      "streetsidesoftware.code-spell-checker",
+      "ms-azuretools.vscode-docker",
+      "hashicorp.terraform",
+      "timonwong.shellcheck",
+      "formulahendry.auto-rename-tag",
+      "apollographql.vscode-apollo",
+      "naumovs.color-highlight",
+      "mikestead.dotenv",
+      "grapecity.gc-excelviewer",
+      "editorconfig.editorconfig",
+      "techer.open-in-browser",
+      "donjayamanne.githistory",
+      "valentjn.vscode-ltex",
+      "eamodio.gitlens",
+      "fabiospampinato.vscode-terminals",
+      "msjsdiag.debugger-for-chrome",
+      "ms-vsliveshare.vsliveshare",
+      "redhat.vscode-yaml",
+      "reduckted.vscode-gitweblinks",
+      "adpyke.vscode-sql-formatter"
+    ]
+  }
+  

@@ -1,0 +1,16 @@
+{
+    "autorun": false,
+    "terminals": [
+      {
+        "name": "Build Watch",
+        "execute": false,
+        "command": "yarn run tsc --build --watch"
+      },
+      {
+        "name": "Lint",
+        "execute": false,
+        "command": "pre-commit run -a"
+      }
+    ]
+  }
+  
