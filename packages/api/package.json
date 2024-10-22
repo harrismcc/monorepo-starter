@@ -1,0 +1,28 @@
+{
+  "name": "@acme/api",
+  "description": "The TRPC API, which is seperate from the backend itself for modularity",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/node": "^22.5.4",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@acme/db": "workspace:*",
+    "@trpc/server": "catalog:",
+    "drizzle-orm": "catalog:",
+    "hono": "^4.6.1",
+    "superjson": "2.2.1",
+    "zod": "catalog:"
+  }
+}

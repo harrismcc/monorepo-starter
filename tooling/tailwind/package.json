@@ -1,0 +1,21 @@
+{
+  "name": "@acme/tailwind-config",
+  "description": "Shared tailwind config",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "files": [
+    "index.ts",
+    "postcss.js"
+  ],
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "catalog:",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "dependencies": {
+    "postcss-import": "^15.1.0"
+  }
+}

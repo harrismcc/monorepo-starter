@@ -1,0 +1,39 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "globalDependencies": ["**/.env", "tsconfig.json"],
+  "tasks": {
+    "migrate": {
+      "cache": false
+    },
+    "dev": {
+      "inputs": ["apps/desktop/**"],
+      "cache": false,
+      "persistent": true
+    },
+    "dev:web": {
+      "inputs": ["apps/desktop/**"],
+      "persistent": true,
+      "cache": false
+    },
+    "install-ollama": {
+      "cache": true
+    },
+    "storybook": {
+      "persistent": true,
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build", "^lint"],
+      "outputs": ["apps/desktop/src-tauri/target/**"]
+    },
+    "lint": {},
+    "lint:fix": {},
+    "clean": {
+      "cache": false
+    },
+    "type-check": {
+      "cache": false
+    }
+  },
+  "globalEnv": []
+}

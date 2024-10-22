@@ -1,0 +1,30 @@
+{
+  "name": "monorepo-starter",
+  "private": true,
+  "description": "",
+  "author": "",
+  "scripts": {
+    "build": " dotenv -- turbo build --parallel",
+    "clean": "turbo clean",
+    "dev": "dotenv -- turbo dev --parallel",
+    "storybook": "turbo storybook",
+    "turbo": "turbo",
+    "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
+    "lint": "turbo lint --cache-dir=.turbo && manypkg check",
+    "lint:fix": "turbo lint:fix && manypkg fix",
+    "type-check": "turbo type-check"
+  },
+  "dependencies": {
+    "@manypkg/cli": "^0.21.0",
+    "dotenv-cli": "^7.2.1",
+    "drizzle-kit": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "^2.0.3"
+  },
+  "packageManager": "pnpm@8.15.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@acme/backend",
+  "description": "Backend using hono and node",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "bun --watch run src/index.ts"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/tailwind-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/node": "^22.5.4",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@acme/api": "workspace:*",
+    "@acme/db": "workspace:*",
+    "@auth/core": "^0.34.2",
+    "@hono/auth-js": "^1.0.10",
+    "@hono/trpc-server": "^0.3.2",
+    "drizzle-orm": "catalog:",
+    "hono": "^4.6.1"
+  }
+}
